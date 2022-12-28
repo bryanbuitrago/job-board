@@ -2,7 +2,8 @@ import { Company, Job } from './db.js'
 
 export const resolvers = {
     Query: {
-        job: (root, { id }) =>  Job.findById(id),
+        company: (_root, { id }) => Company.findById(id),
+        job: (_root, { id }) =>  Job.findById(id),
         jobs: () => Job.findAll(),
     },
 
